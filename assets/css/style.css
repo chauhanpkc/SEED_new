@@ -16,11 +16,10 @@ html,body{
 # General
 --------------------------------------------------------------*/
 .fixed-top {
-  position: sticky;
+  position:sticky;
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1030;
 }
 .align-items-center {
   align-items: center!important;

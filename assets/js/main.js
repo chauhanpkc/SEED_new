@@ -1,9 +1,3 @@
-/**
-* Template Name: Lumia - v4.9.1
-* Template URL: https://bootstrapmade.com/lumia-bootstrap-business-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function() {
   "use strict";
 
@@ -256,5 +250,56 @@
    * Initiate Pure Counter 
    */
   new PureCounter();
+  
+  // ---------bar Chart--------
+  var options = {
+    series: [{
+    name: 'Applied',
+    data: [500, 530, 603, 713]
+  },  {
+    name: 'Approved',
+    data: [212, 315, 304, 407]
+  }],
+    chart: {
+    type: 'bar',
+    height: 350
+  },
+  plotOptions: {
+    bar: {
+      horizontal: false,
+      columnWidth: '55%',
+      endingShape: 'rounded'
+    },
+  },
+  dataLabels: {
+    enabled: false
+  },
+  stroke: {
+    show: true,
+    width: 2,
+    colors: ['transparent']
+  },
+  xaxis: {
+    categories: ['Housing', 'Free Coaching', 'Livelihood', 'Health Insurance'],
+  },
+  yaxis: {
+    title: {
+      text: 'Application'
+    }
+  },
+  fill: {
+    opacity: 1
+  },
+  tooltip: {
+    y: {
+      formatter: function (val) {
+        return "Total " + val + ""
+      }
+    }
+  }
+  };
+
+  var chart = new ApexCharts(document.querySelector("#chart"), options);
+  chart.render();
 
 })()
