@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
 @font-face { font-family: Poppins-ExtraBold,Poppins-Light,Poppins-Medium,OpenSans-Italic-VariableFont_wdth,wght,OpenSans-VariableFont_wdth,wght; 
-  src: url('.font/Poppins-ExtraBold.ttf,.font/Poppins-Light.ttf,.font/Poppins-Medium.ttf,.font/OpenSans-Italic-VariableFont_wdth,wght.ttf,.font/OpenSans-VariableFont_wdth,wght.ttf'); }
+  src: url('font/Poppins-ExtraBold.ttf,.font/Poppins-Light.ttf,font/Poppins-Medium.ttf,font/OpenSans-Italic-VariableFont_wdth,wght.ttf,font/OpenSans-VariableFont_wdth,wght.ttf'); }
                 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -193,12 +195,12 @@ h6 {
   margin-left: 5px;
 }
 
-.navbar a:hover,
+/* .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
   color: #3498db;
-}
+} */
 
 .navbar .dropdown ul {
   display: block;
