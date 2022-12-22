@@ -282,11 +282,11 @@
   xaxis: {
     categories: ['Housing', 'Free Coaching', 'Livelihood', 'Health Insurance'],
   },
-  yaxis: {
-    title: {
-      text: 'Application'
-    }
-  },
+  // yaxis: {
+  //   title: {
+  //     text: 'Application'
+  //   }
+  // },
   fill: {
     opacity: 1
   },
