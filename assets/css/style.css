@@ -1299,7 +1299,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 #footer{
-  background: black;
+  background: #2483c5;
 }
 #footer .footer-top {
 	padding: 0;
@@ -1345,7 +1345,7 @@ ul.footermenu li a {
   padding-left: 5px;
 }
 .credits a{
-  color: rgb(4, 79, 241);
+  color: #2483c5;
   padding-left: 5px;
 }
 
