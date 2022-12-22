@@ -1324,8 +1324,7 @@ ul.footermenu li a {
 	color: black;
 }
 .footer-top-middle {
-  border-bottom: 1px dotted #fff;
-  padding-bottom: 12px;
+  border-bottom: 1px solid black;
   color: white;
 }
 .footer-top-down {
