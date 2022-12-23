@@ -42,6 +42,9 @@ html,body{
 .header1 img {
   max-height: 64px;
 }
+.about_seed{
+  text-align: justify;
+}
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -1398,7 +1401,7 @@ ul.footermenu li a {
   color: white;
 }
 .add_button:hover{
-  background: #82C3EC;
+  background: #0b7dc5;
   color: white;
 }
 input[type="file"]::file-selector-button {
