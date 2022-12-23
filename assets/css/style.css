@@ -20,6 +20,18 @@ html,body{
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+.nav-item a:hover{
+  color:black!important ;
+}
+.btn-chng{
+  background: #0b7dc5;
+}
+.btn-chng:hover{
+  background: #0b7dc5;
+}
+.btn-internal{
+  margin-right: 20px;
+}
 .fixed-top {
   position:sticky;
   top: 0;
@@ -1384,7 +1396,7 @@ ul.footermenu li a {
   width: 200px;
 }
 .add_button{
-  background: #82C3EC;
+  background: #0b7dc5;
   color: white;
 }
 .add_button:hover{
