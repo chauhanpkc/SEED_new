@@ -156,11 +156,13 @@
                 </div>
                 <div class="col-md-6">
                   <label for="" class="fs-4">Name<span class="text-danger">*</span></label><br>
-                  <input type="text" name="" id="" class="form-control-lg w-100" placeholder="Name">
+                  <input type="text" name="" id="" class="form-control-lg w-100 min-max-name"placeholder="Name">
+                  <span class="min-max-name-message text-danger"></span>
                 </div>
                 <div class="col-md-6 mb-4">
                   <label for="" class="fs-4">Father Name<span class="text-danger">*</span></label><br>
-                  <input type="text" name="" id="" class="form-control-lg w-100" placeholder="Father Name">
+                  <input type="text" name="" id="" class="form-control-lg w-100 min-max-fname" placeholder="Father Name">
+                  <span class="min-max-fname-message text-danger"></span>
                 </div>
                 <div class="col-md-6">
                   <label for="" class="fs-4">Upload Passport Size Photo<span class="text-danger">*</span></label><br>
@@ -440,6 +442,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/customized.js"></script>
   <script>
     $(document).ready(function() {
     $("#add").click(function() {
