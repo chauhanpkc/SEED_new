@@ -140,9 +140,9 @@
 
     <!-- ======= Contact Section ======= -->
     <section id="" class="contact section-bg">
-      <div class="container">
+      <div class="container" >
         <!-- Registration page -->
-        <div class="register_page mt-5">
+        <div class="register_page mt-5" id="register_form">
           <h1 class="fw-bolder reg_text text-center">Registration</h1>
             <div class="regis_pg rounded p-4">
               <div>
@@ -150,9 +150,10 @@
                 <hr class="count_hori w-100">
               </div>
               <div class="row">
-                <div class="col-md-6 mb-4">
+                <div class="col-md-6 mb-4 has-error">
                   <label for="" class="fs-4">Email<span class="text-danger">*</span></label><br>
-                  <input type="email" name="" id="" class="form-control-lg w-100" placeholder="Email">
+                  <input type="text" name="email" id="email" class="form-control-lg w-100 email" placeholder="Email">
+                  <span class="email_msg text-danger"></span>
                 </div>
                 <div class="col-md-6">
                   <label for="" class="fs-4">Name<span class="text-danger">*</span></label><br>
@@ -337,7 +338,7 @@
                 </div>
               </div>
               <div class="col-md-12 text-center">
-                <button type="button" class="btn btn-lg add_button mt-4 fw-bold">Register</button>
+                <button type="submit" class="btn btn-lg add_button mt-4 fw-bold">Register</button>
               </div>
             </div>
         </div>
@@ -439,10 +440,13 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
+  
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/customized.js"></script>
+  <!-- <script src="assets/js/bootstrapValidator.min.js"></script> -->
   <script>
     $(document).ready(function() {
     $("#add").click(function() {

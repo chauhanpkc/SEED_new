@@ -1,4 +1,13 @@
 $(document).ready(function () {
+    $(".email").change(function () {    
+        var inputvalues = $(this).val();    
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;    
+        if(!regex.test(inputvalues)){    
+            $(".email_msg").text("Invalid E-mail ID");
+            $(".email_msg").color("Invalid E-mail ID");    
+        return regex.test(inputvalues);    
+        }    
+        }); 
     var minLength = 1;
     var maxLength = 50;
     $(".min-max-name").on("keydown keyup change", function () {
@@ -9,10 +18,6 @@ $(document).ready(function () {
           $(".min-max-name-message").text("Maximum " + maxLength + " character allowed.");
        else
           $(".min-max-name-message").text("");
-       $('.min-max').keyup(function () {
-           var len = maxLength - $(this).val().length;
-           $('.GFG').text(len);
-       });
     });
     var minLength = 1;
     var maxLength = 50;
@@ -24,9 +29,5 @@ $(document).ready(function () {
           $(".min-max-fname-message").text("Maximum " + maxLength + " character allowed.");
        else
           $(".min-max-fname-message").text("");
-       $('.min-max').keyup(function () {
-           var len = maxLength - $(this).val().length;
-           $('.GFG').text(len);
-       });
     });
 });    
