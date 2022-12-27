@@ -142,6 +142,7 @@
     <section id="" class="contact section-bg">
       <div class="container" >
         <!-- Registration page -->
+        <form action="" class="was-validated">
         <div class="register_page mt-5" id="register_form">
           <h1 class="fw-bolder reg_text text-center">Registration</h1>
             <div class="regis_pg rounded p-4">
@@ -150,36 +151,45 @@
                 <hr class="count_hori w-100">
               </div>
               <div class="row">
-                <div class="col-md-6 mb-4 has-error">
+                <div class="col-md-6 mb-4 ">
                   <label for="" class="fs-4">Email<span class="text-danger">*</span></label><br>
-                  <input type="text" name="email" id="email" class="form-control-lg w-100 email" placeholder="Email">
+                  <input type="text" name="email" id="email" class="form-control-lg w-100 email" placeholder="Email" required>
                   <span class="email_msg text-danger"></span>
-                  <span class="m-1 text-danger"id="email_message"></span>
+                  <!-- <span class="m-1 text-danger"id="email_message"></span> -->
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-6">
                   <label for="" class="fs-4">Name<span class="text-danger">*</span></label><br>
-                  <input type="text" name="name" id="name" class="form-control-lg w-100 min-max-name"placeholder="Name">
+                  <input type="text" name="name" id="name" class="form-control-lg w-100 min-max-name"placeholder="Name" required>
                   <span class="min-max-name-message text-danger"></span>
-                  <span class="m-1 text-danger"id="name_message"></span>
+                  <!-- <span class="m-1 text-danger"id="name_message"></span> -->
+                  <!-- <div class="valid-feedback">Valid.</div> -->
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <label for="" class="fs-4">Father Name<span class="text-danger">*</span></label><br>
-                  <input type="text" name="fname" id="fname" class="form-control-lg w-100 min-max-fname" placeholder="Father Name">
+                  <input type="text" name="fname" id="fname" class="form-control-lg w-100 min-max-fname" placeholder="Father Name" required>
                   <span class="min-max-fname-message text-danger"></span>
-                  <span class="m-1 text-danger"id="fname_message"></span>
+                  <!-- <span class="m-1 text-danger"id="fname_message"></span> -->
+                  <!-- <div class="valid-feedback">Valid.</div> -->
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-6">
                   <label for="" class="fs-4">Upload Passport Size Photo<span class="text-danger">*</span></label><br>
-                  <input type="file" name="passport" id="passport" class="form-control-lg w-100 border border-dark bg-white" placeholder="">
-                  <span class="m-1 text-danger"id="passport_message"></span>
+                  <input type="file" name="passport" id="passport_size" class="form-control-lg w-100 border border-dark bg-white" placeholder="" required>
+                  <!-- <span class="m-1 text-danger"id="passport_message"></span> -->
+                  <!-- <div class="valid-feedback">Valid.</div> -->
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <label for="" class="fs-4">Mobile Number<span class="text-danger">*</span></label><br>
-                  <input type="number" name="" id="" class="form-control-lg w-100" placeholder="Mobile Number">
+                  <input type="text" name="" id="m_number" class="form-control-lg w-100 m_number" placeholder="Mobile Number" required >
+                  <div class="m_number_msg text-danger"></div>
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-6">
                   <label for="" class="fs-4">Select State<span class="text-danger">*</span></label><br>
-                  <select class="form-control-lg w-100" name="" id="" required="">
+                  <select class="form-control-lg w-100" name="" id="" required>
                     <option value="">Select State</option>
                     <option value="1">Andaman &amp; Nicobar Islands</option>
                     <option value="2">Andhra Pradesh</option>
@@ -218,40 +228,114 @@
                     <option value="35">West Bengal</option>
                     <option value="6600">Telangana</option>
                   </select>
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <label for="" class="fs-4">District<span class="text-danger">*</span></label><br>
-                  <select class="form-control-lg w-100" name="" id="" required="">
+                  <select class="form-control-lg w-100" name="" id="" required>
                     <option value="">Select District</option>
                     <option value="1">Testing</option>
                   </select>
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-6"> 
                   <label for="" class="fs-4">Select Community<span class="text-danger">*</span></label><br>
-                  <select class="form-control-lg w-100" name="" id="" required="">
+                  <select class="form-control-lg w-100" name="" id="" required>
                     <option value="">Select Community</option>
-                    <option value="1">Testing</option>
+                    <option value="96">Abdal</option>
+                    <option value="97">Aghori</option>
+                    <option value="98">Bagdi</option>
+                    <option value="99">Banjara</option>
+                    <option value="100">Bansforda</option>
+                    <option value="101">Bantar</option>
+                    <option value="102">Bathudi</option>
+                    <option value="103">Bauri</option>
+                    <option value="104">Bedia</option>
+                    <option value="105">Beldar</option>
+                    <option value="106">Bhand (Bhanr)</option>
+                    <option value="107">Bhutiya</option>
+                    <option value="108">Birhor</option>
+                    <option value="109">Chamai Chameshi  (Muslim)</option>
+                    <option value="110">Chandrabanshi (Muslim)</option>
+                    <option value="111">Chik Baraik</option>
+                    <option value="112">Churihar (Muslim)</option>
+                    <option value="113">Dafali</option>
+                    <option value="114">Dhamin</option>
+                    <option value="115">Dhankar</option>
+                    <option value="116">Dhanwar</option>
+                    <option value="117">Dhara</option>
+                    <option value="118">Dharua</option>
+                    <option value="119">Dhekaru</option>
+                    <option value="120">Dhunia (Muslim)</option>
+                    <option value="121">Dom (Dhangad)</option>
+                    <option value="122">Dusadh (Dhari/ Dharhi )</option>
+                    <option value="123">Gaddi*</option>
+                    <option value="124">Gareri</option>
+                    <option value="125">Ghaasi</option>
+                    <option value="126">Ghunnya</option>
+                    <option value="127">Gulgaliya</option>
+                    <option value="128">Jogi*</option>
+                    <option value="129">Kadar</option>
+                    <option value="130">Kalandar</option>
+                    <option value="131">Kanjar</option>
+                    <option value="132">kapadia</option>
+                    <option value="133">Kewat</option>
+                    <option value="134">Kharia</option>
+                    <option value="135">Khawar</option>
+                    <option value="136">Kishan Panchi</option>
+                    <option value="137">Korwa</option>
+                    <option value="138">Kumarbhag Pahadia</option>
+                    <option value="139">Kurariar</option>
+                    <option value="140">Lakhera</option>
+                    <option value="141">Madari (Muslim)</option>
+                    <option value="142">Mahli</option>
+                    <option value="143">Malar (Malhar)</option>
+                    <option value="144">Mallah (Surhiya, Kewat Murawari)</option>
+                    <option value="145">Miriasin</option>
+                    <option value="146">Mirshikar (Muslim)</option>
+                    <option value="147">Muriari</option>
+                    <option value="148">Musahar</option>
+                    <option value="149">Nat (Muslim)</option>
+                    <option value="150">Natada</option>
+                    <option value="151">Netua</option>
+                    <option value="152">Pal (Surhiya, Kewat Murawari)</option>
+                    <option value="153">Patharkat</option>
+                    <option value="154">Saikalgar (Surhiya, Kewat Murawari)</option>
+                    <option value="155"> Sangatrash (only in Nawadah)</option>
+                    <option value="156">Sapera (Muslim)</option>
+                    <option value="157">Sayee (Muslim)</option>
+                    <option value="158">Turha</option>                                            
                   </select>
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-6 mb-4">
-                  <label for="" class="fs-4">Aadhar<span class="text-danger">*</span></label><br>
-                  <input type="text" name="" id="aadhar" class="form-control-lg w-100" placeholder="Aadhar Card Number">
+                  <label for="" class="fs-4">Aadhar<span class="text-danger">*</span><span class="material-symbols-outlined fs-5 cursur"  data-bs-toggle="tooltip" data-bs-placement="top" title="Aadhar number should be in this format example:- 3456 7890 1234">
+                    info
+                    </span></label><br>
+                  <input type="text" name="" id="aadhar" class="form-control-lg w-100 aadhar" placeholder="Aadhar Card Number" required>
+                  <span class="aadhar_msg text-danger"></span>
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-6">
                   <label for="" class="fs-4">Upload cast Certificate (Pdf)<span class="text-danger">*</span></label><br>
-                  <input type="file" name="" id="" class="form-control-lg w-100 border border-dark bg-white" placeholder="">
+                  <input type="file" name="" id="cast_cer" class="form-control-lg w-100 border border-dark bg-white" placeholder="" required>
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <label for="" class="fs-4">Occupation<span class="text-danger">*</span></label><br>
-                  <input type="text" name="" id="" class="form-control-lg w-100" placeholder="Occupation">
+                  <input type="text" name="" id="" class="form-control-lg w-100 min-max-occupation" placeholder="Occupation" required>
+                  <span class="min-max-occupation-message text-danger"></span>
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-6">
                   <label for="" class="fs-4">Annual Income<span class="text-danger">*</span></label><br>
-                  <input type="number" name="" id="" class="form-control-lg w-100" placeholder="Annual Income">
+                  <input type="number" name="" id="" class="form-control-lg w-100" placeholder="Annual Income" required>
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <label for="" class="fs-4">Upload Household Income Certificate(Pdf)<span class="text-danger">*</span></label><br>
-                  <input type="file" name="" id="" class="form-control-lg w-100 border border-dark bg-white mb-4" placeholder="">
+                  <input type="file" name="" id="" class="form-control-lg w-100 border border-dark bg-white" placeholder="" required>
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
               </div>
               <div>
@@ -260,24 +344,32 @@
               </div>
               <div class="row">
                 <div class="col-md-4 mb-4">
-                  <label for="" class="fs-4">IFSC code<span class="text-danger">*</span></label><br>
-                  <input type="text" name="" id="" class="form-control-lg w-100" placeholder="IFSC Code">
+                  <label for="" class="fs-4">IFSC code<span class="text-danger">*</span></label><span class="material-symbols-outlined fs-5 cursur"  data-bs-toggle="tooltip" data-bs-placement="top" title="IFSC Code should be in this format example:- ABCD0123456">
+                    info
+                    </span><br>
+                  <input type="text" name="" id="" class="form-control-lg w-100 ifsc" placeholder="IFSC Code" required>
+                  <span class="ifsc_msg text-danger"></span>
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-4">
                   <label for="" class="fs-4">Bank Name<span class="text-danger">*</span></label><br>
-                  <input type="text" name="" id="" class="form-control-lg w-100" placeholder=" Bank Name">
+                  <input type="text" name="" id="" class="form-control-lg w-100" placeholder=" Bank Name" required>
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-4">
                   <label for="" class="fs-4">Bank Account<span class="text-danger">*</span></label><br>
-                  <input type="number" name="" id="" class="form-control-lg w-100" placeholder="Bank Account">
+                  <input type="number" name="" id="" class="form-control-lg w-100" placeholder="Bank Account" required>
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-4 mb-4">
                   <label for="" class="fs-4">Account Holder Name<span class="text-danger">*</span></label><br>
-                  <input type="text" name="" id="" class="form-control-lg w-100" placeholder="Account Holder Name">
+                  <input type="text" name="" id="" class="form-control-lg w-100" placeholder="Account Holder Name" required>
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-8">
                   <label for="" class="fs-4">Passbook First Page/ Cancelled Cheque (Pdf) <span class="text-danger">*</span></label><br>
-                  <input type="file" name="" id="" class="form-control-lg w-100 border border-dark bg-white mb-4" placeholder="">
+                  <input type="file" name="" id="bank_first" class="form-control-lg w-100 border border-dark bg-white" placeholder="" required>
+                  <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
               </div>
               <div>
@@ -303,10 +395,10 @@
 
                       <td><input type="text" class="form-control fami_det" id="age" name="age[]" placeholder="Age" required="required"onkeypress="return isNumber(event)" maxlength="2"></td>
                       <td>
-                        <select class="form-control fami_det" id="disability" name="disability[]">
+                        <select class="form-control fami_det" required="required" id="disability" name="disability[]">
                             <option value="">Select</option>
-                            <option value="Yes">Yes</option>
-                            <option value="No">No</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
                         </select>
                         
                       </td>
@@ -331,7 +423,7 @@
                       </td>
                       <td><input type="text" class="form-control fami_det" id="family_occupation" name="family_occupation[]" placeholder="Occupation" required="required" maxlength="50" onchange="validatestrings(this);"></td>
 
-                      <td><input type="text" class="form-control check-income" id="family_income" name="family_income[]" placeholder="Income" required="required" maxlength="7" onkeypress="return isNumber(event)">
+                      <td><input type="number" class="form-control check-income" id="family_income" name="family_income[]" placeholder="Income" required="required" maxlength="7" onkeypress="return isNumber(event)">
                       <span class="inptEdt"></span></td>
                     </tr>
                   </tbody>
@@ -346,6 +438,7 @@
               </div>
             </div>
         </div>
+        </form>
       <!-- registration end -->
       </div>
     </section>

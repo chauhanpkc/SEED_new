@@ -1213,3 +1213,6 @@ input[type="file"]::file-selector-button {
 .error-message{
   display: block;
 }
+.cursur{
+  cursor: pointer;
+}
