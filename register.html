@@ -154,20 +154,24 @@
                   <label for="" class="fs-4">Email<span class="text-danger">*</span></label><br>
                   <input type="text" name="email" id="email" class="form-control-lg w-100 email" placeholder="Email">
                   <span class="email_msg text-danger"></span>
+                  <span class="m-1 text-danger"id="email_message"></span>
                 </div>
                 <div class="col-md-6">
                   <label for="" class="fs-4">Name<span class="text-danger">*</span></label><br>
-                  <input type="text" name="" id="" class="form-control-lg w-100 min-max-name"placeholder="Name">
+                  <input type="text" name="name" id="name" class="form-control-lg w-100 min-max-name"placeholder="Name">
                   <span class="min-max-name-message text-danger"></span>
+                  <span class="m-1 text-danger"id="name_message"></span>
                 </div>
                 <div class="col-md-6 mb-4">
                   <label for="" class="fs-4">Father Name<span class="text-danger">*</span></label><br>
-                  <input type="text" name="" id="" class="form-control-lg w-100 min-max-fname" placeholder="Father Name">
+                  <input type="text" name="fname" id="fname" class="form-control-lg w-100 min-max-fname" placeholder="Father Name">
                   <span class="min-max-fname-message text-danger"></span>
+                  <span class="m-1 text-danger"id="fname_message"></span>
                 </div>
                 <div class="col-md-6">
                   <label for="" class="fs-4">Upload Passport Size Photo<span class="text-danger">*</span></label><br>
-                  <input type="file" name="" id="" class="form-control-lg w-100 border border-dark bg-white" placeholder="">
+                  <input type="file" name="passport" id="passport" class="form-control-lg w-100 border border-dark bg-white" placeholder="">
+                  <span class="m-1 text-danger"id="passport_message"></span>
                 </div>
                 <div class="col-md-6 mb-4">
                   <label for="" class="fs-4">Mobile Number<span class="text-danger">*</span></label><br>
@@ -338,7 +342,7 @@
                 </div>
               </div>
               <div class="col-md-12 text-center">
-                <button type="submit" class="btn btn-lg add_button mt-4 fw-bold">Register</button>
+                <button type="button" id="register" class="btn btn-lg add_button mt-4 fw-bold">Register</button>
               </div>
             </div>
         </div>
@@ -446,6 +450,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="assets/js/customized.js"></script>
+  <script src="assets/js/validator.js"></script>
   <!-- <script src="assets/js/bootstrapValidator.min.js"></script> -->
   <script>
     $(document).ready(function() {
