@@ -32,10 +32,11 @@ $(document).ready(function () {
          $(".ifsc").on('change keyup',function () {    
             var ifscvalues = $(this).val();    
             var regex = /^[A-Z]{4}[0-9]{7}$/; 
-            if(!regex.test(ifscvalues)){    
+            if(!regex.test(ifscvalues))   
                 $(".ifsc_msg").text("Invalid IFSC Code"); 
-            return regex.test(ifscvalues);    
-            }    
+            else 
+            $(".ifsc_msg").text("");   
+                
             });
     var minLength = 1;
     var maxLength = 50;
