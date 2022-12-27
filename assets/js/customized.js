@@ -3,19 +3,19 @@ $(document).ready(function () {
     $(".email").on('change keyup',function () {    
         var inputvalues = $(this).val();    
         var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        if(!regex.test(inputvalues)){    
+        if(!regex.test(inputvalues))    
             $(".email_msg").text("Invalid E-mail ID"); 
-        return regex.test(inputvalues);    
-        }    
+        else $(".email_msg").text("");  
+            
         }); 
       //   =======Mobile Number Validation=========
       $(".m_number").on('change keyup',function () {    
          var mobilevalues = $(this).val();    
          var regex = /^[6-9]{1}[0-9]{9}$/; 
-         if(!regex.test(mobilevalues)){    
+         if(!regex.test(mobilevalues))    
              $(".m_number_msg").text("Invalid Mobile number"); 
-         return regex.test(mobilevalues);    
-         }    
+         else
+         $(".m_number_msg").text("");
          });
       //   =======Aadhar card validation========
       $(".aadhar").on('change keyup',function () {    
