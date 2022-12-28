@@ -68,7 +68,7 @@ $(document).ready(function () {
        //   =======Aadhar card validation========
        $(".aadhar").on('change keyup',function () {    
           var aadharvalues = $(this).val();    
-          var regex = /^[2-9]{1}[0-9]{3}\s[0-9]{4}\s[0-9]{4}$/; 
+          var regex = /^([2-9]{1}[0-9]{3}\s[0-9]{4}\s[0-9]{4})|([2-9]{1}[0-9]{3}-[0-9]{4}-[0-9]{4})$/; 
           if(!regex.test(aadharvalues))    
               $(".aadhar_msg").text("Invalid Aadhar Card number"); 
           else
