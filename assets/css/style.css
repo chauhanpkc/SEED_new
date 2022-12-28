@@ -1216,3 +1216,20 @@ input[type="file"]::file-selector-button {
 .cursur{
   cursor: pointer;
 }
+/* ========Admin Dashboard======== */
+.dashboard_page{
+  background-color: #deecff;
+}
+.dashboard_heading{
+  background-color: #0b7dc5;
+}
+.link-arrow{
+  box-shadow: 0px 0px 7px #DEECFF;
+  width: 25px;
+  height: 25px;
+  background-color: #DEECFF;
+}
+.link-arrow span{
+  color: black!important;
+  margin-left: 1px;
+}
