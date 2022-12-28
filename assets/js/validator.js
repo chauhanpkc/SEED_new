@@ -59,7 +59,7 @@ $(document).ready(function () {
        //   =======Mobile Number Validation=========
        $(".m_number").on('change keyup',function () {    
           var mobilevalues = $(this).val();    
-          var regex = /^[6-9]{1}[0-9]{9}$/; 
+          var regex = /^([6-9]{1}[0-9]{9})&&([0-9])$/; 
           if(!regex.test(mobilevalues))    
               $(".m_number_msg").text("Invalid Mobile number"); 
           else
@@ -86,29 +86,44 @@ $(document).ready(function () {
              $(".ifsc_msg").text("");   
                  
              });
-     var minLength = 1;
-     var maxLength = 50;
+             //===============Name Validation ==========
+     var min_name_Length = 3;
+     var max_name_Length = 50;
      $(".min-max-name").on("keydown keyup change", function () {
         var value = $(this).val();
-        if (value.length < minLength)
-           $(".min-max-name-message").text("Minimum " + minLength + " character required.");
-        else if (value.length > maxLength)
-           $(".min-max-name-message").text("Maximum " + maxLength + " character allowed.");
+        if (value.length < min_name_Length)
+           $(".min-max-name-message").text("Minimum " + min_name_Length + " character required.");
+        else if (value.length > max_name_Length)
+           $(".min-max-name-message").text("Maximum " + max_name_Length + " character allowed.");
         else
            $(".min-max-name-message").text("");
+           var namevalues = $(this).val();    
+             var regex = /^[a-zA-Z ]+$/; 
+             if(!regex.test(namevalues))   
+                 $(".name_msg").text("Invalid Name"); 
+             else 
+             $(".name_msg").text(""); 
      });
-     var minLength = 1;
-     var maxLength = 50;
+     //====================Fname Validation==========
+     var min_fname_Length = 3;
+     var max_fname_Length = 50;
      $(".min-max-fname").on("keydown keyup change", function () {
         var value = $(this).val();
-        if (value.length < minLength)
-           $(".min-max-fname-message").text("Minimum " + minLength + " character required.");
-        else if (value.length > maxLength)
-           $(".min-max-fname-message").text("Maximum " + maxLength + " character allowed.");
+        if (value.length < min_fname_Length)
+           $(".min-max-fname-message").text("Minimum " + min_fname_Length + " character required.");
+        else if (value.length > max_fname_Length)
+           $(".min-max-fname-message").text("Maximum " + max_fname_Length + " character allowed.");
         else
            $(".min-max-fname-message").text("");
+           var fnamevalues = $(this).val();    
+             var regex = /^[a-zA-Z ]+$/; 
+             if(!regex.test(fnamevalues))   
+                 $(".fname_msg").text("Invalid Father Name"); 
+             else 
+             $(".fname_msg").text("");
      });
-     var minLength = 1;
+     //===============Occupation Validation==========
+     var minLength = 3;
      var maxLength = 50;
      $(".min-max-occupation").on("keydown keyup change", function () {
         var value = $(this).val();
@@ -119,6 +134,7 @@ $(document).ready(function () {
         else
            $(".min-max-occupation-message").text("");
      });
+     //=====================Annual Income==============
      var min_Length = 2;
      var max_Length = 6;
      $(".min-max-AnnualIncome").on("keydown keyup change", function () {
@@ -149,13 +165,13 @@ $(document).ready(function () {
     passport_s = $("#passport_size").val();
     console.log(passport_s);
     var upld = passport_s.split('.').pop();
-    if (upld == 'jpg') {
+    if (upld == 'jpeg' || upld == 'jpg') {
         // alert("File uploaded is pdf")
      } else {
-        alert("Only .Jpg Image are allowed")
+        alert("Only .jpg, .jpeg Image are allowed")
         }
     if (this.files[0].size > 204800) {
-        alert("Please upload .jpg Image file less than 200KB ....");
+        alert("Please upload .jpg, .jpeg Image file less than 200KB ....");
         $(this).val('');
     }
 
@@ -171,8 +187,25 @@ $(document).ready(function () {
      } else {
         alert("Only PDF are allowed")
         }
-    if (this.files[0].size > 204800) {
-        alert("Please upload pdf file less than 200KB ....");
+    if (this.files[0].size > 5242880) {
+        alert("Please upload pdf file less than 5MB ....");
+        $(this).val('');
+    }
+
+});
+//==============Income Certificate============
+var income_certificate = "";
+    $('#income_cer').on('change', function () {
+    income_certificate = $("#income_cer").val();
+    console.log(income_certificate);
+    var upld = income_certificate.split('.').pop();
+    if (upld == 'pdf') {
+        // alert("File uploaded is pdf")
+     } else {
+        alert("Only PDF are allowed")
+        }
+    if (this.files[0].size > 5242880) {
+        alert("Please upload pdf file less than 5MB ....");
         $(this).val('');
     }
 
@@ -188,8 +221,8 @@ var bank_passbook = "";
      } else {
         alert("Only PDF are allowed")
         }
-    if (this.files[0].size > 204800) {
-        alert("Please upload pdf file less than 200KB ....");
+    if (this.files[0].size > 5242880) {
+        alert("Please upload pdf file less than 5MB ....");
         $(this).val('');
     }
 
