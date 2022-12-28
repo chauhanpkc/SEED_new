@@ -119,7 +119,29 @@ $(document).ready(function () {
         else
            $(".min-max-occupation-message").text("");
      });
-     
+     var min_Length = 2;
+     var max_Length = 6;
+     $(".min-max-AnnualIncome").on("keydown keyup change", function () {
+        var value = $(this).val();
+        if (value.length < min_Length)
+           $(".min-max-AnnualIncome-msg").text("Minimum " + min_Length + " digit required.");
+        else if (value.length > max_Length)
+           $(".min-max-AnnualIncome-msg").text("Maximum " + max_Length + " digit allowed.");
+        else
+           $(".min-max-AnnualIncome-msg").text("");
+     });
+    //  =============Bank Account Number=============
+    var min__Length = 8;
+    var max__Length = 11;
+    $(".min-max-BankAccount").on("keydown keyup change", function () {
+       var value = $(this).val();
+       if (value.length < min__Length)
+          $(".min-max-BankAccount-msg").text("Minimum " + min__Length + " digit required.");
+       else if (value.length > max__Length)
+          $(".min-max-BankAccount-msg").text("Maximum " + max__Length + " digit allowed.");
+       else
+          $(".min-max-BankAccount-msg").text("");
+    });
  });    
 //   =======Passport Size Photo=========
   var passport_s = "";
