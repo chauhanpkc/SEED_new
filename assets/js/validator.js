@@ -98,7 +98,7 @@ $(document).ready(function () {
         else
            $(".min-max-name-message").text("");
            var namevalues = $(this).val();    
-             var regex = /^[a-zA-Z ]+$/; 
+             var regex = /^[a-zA-Z .]+$/; 
              if(!regex.test(namevalues))   
                  $(".name_msg").text("Invalid Name"); 
              else 
@@ -116,7 +116,7 @@ $(document).ready(function () {
         else
            $(".min-max-fname-message").text("");
            var fnamevalues = $(this).val();    
-             var regex = /^[a-zA-Z ]+$/; 
+             var regex = /^[a-zA-Z .]+$/; 
              if(!regex.test(fnamevalues))   
                  $(".fname_msg").text("Invalid Father Name"); 
              else 
