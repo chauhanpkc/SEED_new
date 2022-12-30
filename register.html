@@ -177,8 +177,8 @@
                   <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-6">
-                  <label for="" class="fs-4">Mobile Number<span class="text-danger">*</span></label><br>
-                  <input type="text" name="" id="m_number" class="form-control-lg w-100 m_number" placeholder="Mobile Number" required maxlength="11">
+                  <label for="" class="fs-4">Mobile Number<span class="text-danger">*</span><span class="fs-6 text-success">(Enter 10 digit Mobile Number)</span></label><br>
+                  <input type="text" name="" id="" class="form-control-lg w-100 m_number" placeholder="Mobile Number" required maxlength="11">
                   <div class="m_number_msg text-danger"></div>
                   <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
@@ -314,12 +314,14 @@
                 <div class="col-md-6 mb-4">
                   <label for="" class="fs-4">Occupation<span class="text-danger">*</span></label><br>
                   <input type="text" name="" id="" class="form-control-lg w-100 min-max-occupation" placeholder="Occupation" required maxlength="51">
+                  <span class="text-danger occupation_msg"></span>
                   <span class="min-max-occupation-message text-danger"></span>
                   <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-6">
                   <label for="" class="fs-4">Annual Income<span class="text-danger">*</span></label><br>
-                  <input type="number" name="" id="" class="form-control-lg w-100 min-max-AnnualIncome" placeholder="Annual Income" required maxlength="7">
+                  <input type="text" name="" id="" class="form-control-lg w-100 min-max-AnnualIncome" placeholder="Annual Income" required maxlength="7">
+                  <span class="text-danger annual_inc_msg"></span>
                   <span class="text-danger min-max-AnnualIncome-msg"></span>
                   <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
@@ -367,7 +369,9 @@
                 </div>
                 <div class="col-md-4 mb-4">
                   <label for="" class="fs-4">Account Holder Name<span class="text-danger">*</span></label><br>
-                  <input type="text" name="" id="" class="form-control-lg w-100" placeholder="Account Holder Name" required>
+                  <input type="text" name="" id="" class="form-control-lg w-100 account_holder" placeholder="Account Holder Name" required>
+                  <span class="text-danger account_holder_msg"></span>
+                  <span class="text-danger min-max_account_holder_msg"></span>
                   <div class="invalid-feedback">Please fill out this field.</div>
                 </div>
                 <div class="col-md-8">
@@ -395,8 +399,8 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td><input type="text" class="form-control fami_det" id="family_name" name="family_name[]" placeholder="Name" required="required" maxlength="50" onchange="validatestrings(this);"></td>
-
+                      <td><input type="text" class="form-control fami_det fami_name" id="family_name" name="family_name[]" placeholder="Name" required="required" maxlength="50" onchange="validatestrings(this);"></td>
+                      
                       <td><input type="text" class="form-control fami_det" id="age" name="age[]" placeholder="Age" required="required"onkeypress="return isNumber(event)" maxlength="2"></td>
                       <td>
                         <select class="form-control fami_det" required="required" id="disability" name="disability[]">

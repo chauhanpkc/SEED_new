@@ -29,6 +29,14 @@ html,body{
 .btn-chng:hover{
   background: #0b7dc5;
 }
+.btn:first-child:active{
+  background: #0b7dc5;
+  color: white;
+}
+/* .btn-chng span :active{
+  background: #0b7dc5;
+} */
+
 .btn-internal{
   margin-right: 26px;
 }

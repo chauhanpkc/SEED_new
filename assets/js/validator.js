@@ -59,7 +59,7 @@ $(document).ready(function () {
        //   =======Mobile Number Validation=========
        $(".m_number").on('change keyup',function () {    
           var mobilevalues = $(this).val();    
-          var regex = /^([6-9]{1}[0-9]{9})&&([0-9])$/; 
+          var regex = /^([6-9]{1}[0-9]{9})$/; 
           if(!regex.test(mobilevalues))    
               $(".m_number_msg").text("Invalid Mobile number"); 
           else
@@ -133,6 +133,12 @@ $(document).ready(function () {
            $(".min-max-occupation-message").text("Maximum " + maxLength + " character allowed.");
         else
            $(".min-max-occupation-message").text("");
+           var fnamevalues = $(this).val();    
+             var regex = /^[a-zA-Z ,]+$/; 
+             if(!regex.test(fnamevalues))   
+                 $(".occupation_msg").text("Invalid Occupation"); 
+             else 
+             $(".occupation_msg").text("");
      });
      //=====================Annual Income==============
      var min_Length = 2;
@@ -145,6 +151,12 @@ $(document).ready(function () {
            $(".min-max-AnnualIncome-msg").text("Maximum " + max_Length + " digit allowed.");
         else
            $(".min-max-AnnualIncome-msg").text("");
+           var mobilevalues = $(this).val();    
+          var regex = /^([0-9])+$/; 
+          if(!regex.test(mobilevalues))    
+              $(".annual_inc_msg").text("Invalid Annual Income"); 
+          else
+          $(".annual_inc_msg").text("");
      });
     //  =============Bank Account Number=============
     var min__Length = 8;
@@ -158,6 +170,23 @@ $(document).ready(function () {
        else
           $(".min-max-BankAccount-msg").text("");
     });
+    var min_name___Length = 3;
+     var max_name___Length = 50;
+     $(".account_holder").on("keydown keyup change", function () {
+        var value = $(this).val();
+        if (value.length < min_name___Length)
+           $(".min-max_account_holder_msg").text("Minimum " + min_name___Length + " character required.");
+        else if (value.length > max_name___Length)
+           $(".min-max_account_holder_msg").text("Maximum " + max_name___Length + " character allowed.");
+        else
+           $(".min-max_account_holder_msg").text("");
+           var namevalues = $(this).val();    
+             var regex = /^[a-zA-Z .]+$/; 
+             if(!regex.test(namevalues))   
+                 $(".account_holder_msg").text("Invalid Account Holder Name"); 
+             else 
+             $(".account_holder_msg").text(""); 
+     });
  });    
 //   =======Passport Size Photo=========
   var passport_s = "";
@@ -227,3 +256,20 @@ var bank_passbook = "";
     }
 
 });
+     var min_name_fami_Length = 3;
+     var max_name_fami_Length = 50;
+     $(".fami_name").on("keydown keyup change", function () {
+        var value = $(this).val();
+        if (value.length < min_name_fami_Length)
+           $(".fami_name_msg").text("Minimum " + min_name_fami_Length + " character required.");
+        else if (value.length > max_name_fami_Length)
+           $(".fami_name_msg").text("Maximum " + max_name_fami_Length + " character allowed.");
+        else
+           $(".fami_name_msg").text("");
+           var namevalues = $(this).val();    
+             var regex = /^[a-zA-Z .]+$/; 
+             if(!regex.test(namevalues))   
+                 $(".fami_name-msg").text("Invalid Name"); 
+             else 
+             $(".fami_name-msg").text(""); 
+     });
