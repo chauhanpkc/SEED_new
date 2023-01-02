@@ -20,6 +20,9 @@ html,body{
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+/* .body_change{
+  filter: grayscale(1);
+} */
 .nav-item a:hover{
   color:black!important ;
 }
@@ -1217,6 +1220,10 @@ input[type="file"]::file-selector-button {
   border: 0;
   border-radius: 0 1em 1em 0;
   cursor: pointer;
+  /* font-size:medium; */
+}
+.input_field{
+  font-size: medium;
 }
 .error-message{
   display: block;

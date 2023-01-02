@@ -276,36 +276,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-    $(document).ready(function(){
-        $("#login").click(function(){
-          $(".login_page").show();
-          $(".register_page").hide();
-        });
-        $("#register").click(function(){
-          $(".register_page").show();
-          $(".login_page").hide();
-      });
-    });
-    $(document).ready(function() {
-    $("#add").click(function() {
-      $('#mytable tbody>tr:last').clone(true).insertAfter('#mytable tbody>tr:last');
-      $('#mytable tbody>tr:last #family_name').val('');
-      $('#mytable tbody>tr:last #age').val('');
-      $('#mytable tbody>tr:last #disability').val('');
-      $('#mytable tbody>tr:last #relationship').val('');
-      $('#mytable tbody>tr:last #family_occupation').val('');
-      $('#mytable tbody>tr:last #family_income').val('');
-      return false;
-    });
-    // aadhar...........
-    $('#aadhar').on('keypress change', function() {
-    $(this).val(function(index, value) {
-      return value.replace(/\W/gi, '').replace(/(.{4})/g, '$1 ');
-    });
-  });
-  });
-  </script>
 
 </body>
 
